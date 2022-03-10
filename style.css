@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    }
+    
+body{ 
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url("https://assets.codepen.io/6060109/ZigZag.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Montserrat;
+    font-style: normal;
+    }
+
+    #panel-all{
+        max-width: 400px;
+        margin:0 auto;
+    }
+
+
+.panel{
+    width: 90%;
+    height: 567px;
+    background: #FFFFFF;
+    box-shadow: 0px 40px 40px -20px #3C7B61;
+    border-radius: 5px;
+    margin: 71px auto;
+    position:relative;
+    flex: 0 0 auto;
+   
+}
+ 
+
+.close-icon>img{
+    position:absolute;
+    right:12px;
+    top:11px;
+
+}
+
+.confirmation-content{
+   text-align: center;
+
+}
+
+.confirmation-content>img{
+    padding-top: 47px;
+
+}
+.confirmation-content>h2{
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 27px;
+color: #2F463D;
+padding-top: 20px;
+}
+
+.panel .confirmation-content p{
+font-size: 14px;
+line-height: 26px;
+color: #828282;
+padding-top: 10px;
+margin: 0 20px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0px;
+}
+
+.food-menu{
+    height: 66px;
+    width:85%;
+    background: #F0FFF5;
+    border-radius: 5px;
+    margin: 35px auto;
+    display: flex;
+}
+
+
+.food-menu>h2{
+font-weight: 800;
+font-size: 14px;
+line-height: 17px;
+color: #2F463D;
+margin-top:15px;
+margin-left:15px;
+}
+
+.price{
+display: block;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+color: #7A8F85;
+margin-top: 5px;
+}
+
+.food-menu>a{
+font-weight: bold;
+font-size: 13px;
+line-height: 16px;
+text-decoration:none;
+color: #467A66;
+margin-top: 25px;
+margin-left:50px;
+transition: .3s ease all;
+}
+
+a:hover{
+    opacity: .8;
+    transition: .3s ease all;
+    cursor: pointer;
+   
+}
+
+button{
+    margin: 5px auto;
+    display: block;
+    width: 85%;
+    height:50px;
+    border:none;
+    background: #46A67E;
+    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFF;
+    font-family: Montserrat;
+    transition: .3s ease all;
+}
+
+button:hover {
+    opacity: .8;
+    transition: .3s ease all;
+    cursor: pointer;
+   
+  }
+
+
+.three-dots{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 45px;
+}
+
+.dot {
+  width: 0.625em;
+  height: 0.625em;
+  background: #E0E0E0;
+  border-radius: 10px;
+}
+
+.dot-green{
+    background: #67BD99;
+}
+
+
+
+.left-panel, .right-panel{
+    display: none;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px){
+
+/* Styling all panels */
+
+    #panel-all{
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .panel .confirmation-content h2{
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .panel .confirmation-content p{
+        font-size: 16px;
+        margin: 0 50px;
+    }
+
+    .panel .confirmation-content img{
+        padding-top:65px;
+    }
+
+    .three-dots{
+        gap:20px;
+    }
+
+
+/* MIDDLE PANEL */
+
+.middle-panel{
+    z-index:9;
+    height: 665px;
+    width:450px;
+}
+
+
+    .middle-panel .confirmation-content img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .middle-panel .confirmation-content h2{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+   .middle-panel .food-menu>a{
+        margin-top: 25px;
+        margin-left: 130px;
+        }
+
+    .middle-panel .three-dots{
+        padding-top: 15px;
+    }
+
+    
+
+    .middle-panel .food-menu a {
+        margin-right: 25px;
+    }
+
+    .left-panel,.right-panel{
+    margin-right:-12px;
+    margin-top: 100px;
+    height: 610px;
+    width: 400px;
+    z-index: 1;
+    }
+    
+
+/* LEFT PANEL  */
+
+.left-panel{
+    display: block;
+    flex-shrink: 0;
+}
+
+
+
+.left-panel .confirmation-content img{
+    padding-bottom: 35px;
+}
+
+.left-panel .confirmation-content h2{
+    padding-bottom: 20px;
+
+}
+
+.left-panel .confirmation-content p{
+    padding-bottom: 50px;
+}
+
+    .button-left{
+    background: #BDBDBD;
+    box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+    margin-top: -10px;
+       
+}
+
+  
+
+    
+
+/* RIGHT PANEL */
+
+    .button-right{
+        background: #BDBDBD;
+        box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+        margin-top: -10px;
+    }
+
+
+
+    .right-panel{
+    display: block;
+    flex-shrink: 0;
+}
+
+
+    .right-panel .confirmation-content h2{
+        padding-bottom:25px;
+    }
+
+    .right-panel .confirmation-content p{
+        padding-bottom: 45px;
+    }
+
+    
+}
